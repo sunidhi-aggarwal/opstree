@@ -1,0 +1,11 @@
+---
+ - hosts: localhost
+   become: true
+   become_method: sudo
+
+   roles:
+  # - java
+  # - maven
+  # - docker
+  # - mysql
+   - deployment

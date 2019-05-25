@@ -1,0 +1,8 @@
+---
+ - name: install openjdk-8-jdk
+   apt:
+    update_cache: yes
+    name: openjdk-8-jdk
+    state: latest
+    install_recommends: no
+

@@ -1,0 +1,16 @@
+---
+ - name: clone git project
+   git:
+    repo: https://github.com/opstree/spring3hibernate.git
+    version: master
+    dest: /home/ubuntu/test
+    force: yes
+     
+ - name: copy databse propert file
+   template:
+    src: database.properties.j2
+    dest: "/home/ubuntu/test/src/main/resources/database.properties"
+
+ - name: hange directory and execute docker build
+   command: chdir=/home/ubuntu/test "sudo docker build -t test -f /home/ubuntu/test/Dockerfile ."
+

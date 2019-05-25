@@ -1,0 +1,7 @@
+---
+ - name: install Apache Maven
+   apt:
+    update_cache: yes
+    name: maven
+    state: latest
+    install_recommends: no
