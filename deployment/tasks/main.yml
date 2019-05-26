@@ -5,12 +5,7 @@
     version: master
     dest: /home/ubuntu/opstree
     force: yes
-     
- #- name: copy databse propert file
- #  template:
- #   src: /home/ubuntu/playbook/deployment/templates/database.properties.j2
- #   dest: "/home/ubuntu/opstree/src/main/resources/database.properties"
-
+    
  - name: build Dockerfile
    command: "docker build -t opstree -f /home/ubuntu/opstree/Dockerfile /home/ubuntu/opstree/."
 
