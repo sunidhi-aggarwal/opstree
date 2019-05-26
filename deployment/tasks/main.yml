@@ -8,7 +8,7 @@
      
  - name: copy databse propert file
    template:
-    src: database.properties.j2
+    src: /home/ubuntu/playbook/deployment/templates/database.properties.j2
     dest: "/home/ubuntu/opstree/src/main/resources/database.properties"
 
  - name: build Dockerfile
