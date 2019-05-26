@@ -3,16 +3,16 @@
    git:
     repo: https://github.com/opstree/spring3hibernate.git
     version: master
-    dest: /home/ubuntu
+    dest: /home/ubuntu/opstree
     force: yes
      
  - name: copy databse propert file
    template:
     src: database.properties.j2
-    dest: "/home/ubuntu/spring3hibernate/src/main/resources/database.properties"
+    dest: "/home/ubuntu/opstree/src/main/resources/database.properties"
 
  - name: build Dockerfile
-   command: "docker build -t opstree -f /home/ubuntu/spring3hibernate/Dockerfile /home/ubuntu/spring3hibernate/."
+   command: "docker build -t opstree -f /home/ubuntu/opstree/Dockerfile /home/ubuntu/opstree/."
 
  - name: Run Docker container
    command: "docker run -d --name test -p 8080:8080 opstree"
