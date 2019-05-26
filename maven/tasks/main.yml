@@ -5,3 +5,11 @@
     name: maven
     state: latest
     install_recommends: no
+
+
+ - shell: echo M2_HOME is $M2_HOME
+   environment:
+     M2_HOME: /usr/share/maven
+     MAVEN_HOME: /usr/share/maven
+   register: shellout
+ - debug: var=shellout
