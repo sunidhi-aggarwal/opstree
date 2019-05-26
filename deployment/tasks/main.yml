@@ -15,5 +15,5 @@
    command: "docker build -t opstree -f /home/ubuntu/opstree/Dockerfile /home/ubuntu/opstree/."
 
  - name: Run Docker container
-   command: "docker run -d --name test -p 8080:80 opstree"
+   command: "docker run -d --name test -p 80:8080 opstree"
 
