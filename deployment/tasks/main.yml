@@ -11,6 +11,9 @@
     src: database.properties.j2
     dest: "/home/ubuntu/test/src/main/resources/database.properties"
 
- - name: hange directory and execute docker build
-   command: chdir=/home/ubuntu/test "sudo docker build -t test -f /home/ubuntu/test/Dockerfile ."
+    # - name: build Dockerfile
+    #command: "docker build -t test -f /home/ubuntu/test/Dockerfile /home/ubuntu/test/."
+
+ - name: Run Docker container
+   command: "docker run -d --name test -p 7777:8080 test"
 
